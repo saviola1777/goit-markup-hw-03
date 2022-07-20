@@ -265,6 +265,7 @@ letter-spacing: 0.03em;
 color: var(--first-color-text);
 background: var(--second-background);
 border-radius: 4px;
+border-color:var(--second-background);
 }
 .btn {
 color: var(--three-color);  
