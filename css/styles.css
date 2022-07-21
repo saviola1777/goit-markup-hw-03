@@ -15,6 +15,7 @@
 }
 body {
 font-family: 'Roboto' , 'Raleway' , sans-serif;
+width: 1600px;
 font-size: 14px;
 letter-spacing: 0.03em;
 color: var(--first-color-text);
@@ -27,37 +28,61 @@ border-color:var(--color-bacround) ;
     margin: 0;
     padding-left: 0;
  }
+ img {
+    display: block;
+ }
  .cointeiner {
+    box-sizing: border-box;
     width: 1200px;
    margin: 0 auto;
    padding: 0 15px;
-   outline: 1px solid red;
+   outline: 1px solid transparent;
  }
  .section {
     padding:94px 0 ;
+    width: 100%;
  }
+ .display {
+    display: flex;
+ }
+ /*----------------- Header------------- */
+ 
+.header {
+border-bottom: 1px solid #ECECEC;
+}
 .header-link-logo {
 font-family: 'Raleway';
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
+letter-spacing: 0.03em;
 color: var(--color-logo);
 text-decoration: none;
+padding: 24px 0 25px;
+margin-right: 93px;
 
 }
 .header-span {
 color: var(--first-color-text);
 }
 
+
 .header-list-nav {
 list-style: none;
+display: flex;
+gap: 50px;
 }
+
+ 
 .header-link {
+display: block;
 font-weight: 500;
 text-decoration: none;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--first-color-text);
+padding: 32px 0;
+
 }
  .current {
     color: var(--color-curennt);
@@ -65,10 +90,14 @@ color: var(--first-color-text);
 
 .header-contact {
     list-style: none;
+    display: flex;
+    margin-left:auto;
 }
 /* -------Фокус и Ховер------- */
 
 .header-mail-link {
+display: block;
+padding: 32px 0;
 font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.02em;
@@ -76,11 +105,14 @@ color:var(--header-mail-tel);
 text-decoration: none;
 }
 .header-tel-link {
+display: block;
+padding: 32px 0;
 font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--header-mail-tel);
 text-decoration: none;
+margin-left: 50px;
 }
 
 /* -----Секція Hero------- */
@@ -101,7 +133,14 @@ color: var(--three-color);
 }
 /* -----------Кнопка Button-------- */
 .hero-btn {
-display: block;
+ display: block;
+ border: 0;
+ padding: 10px 32px;
+  border-radius: 4px;
+  margin: 30px auto 0;
+  border-color: transparent;
+  
+
 font-family: inherit;/* inherit Наслідує від боді */
 font-weight: 700;
 font-size: 16px;
@@ -110,10 +149,6 @@ text-align: center;
 letter-spacing: 0.06em;
 color: var(--three-color);
 background: var(----color-backround);
-box-shadow: var(--black-rgba);
-border-radius: 4px;
-padding: 10px 30px;
-margin: 30px auto 0;
 }
 .hero-btn:hover , 
 .hero-btn:focus {
@@ -136,24 +171,29 @@ overflow: hidden;
 .characteristics-list {
     list-style: none;
     display: flex;
+    gap: 30px;
 }
+.characteristics-item {
+    width: 270px;
+}
+
 .characteristics-title {
 font-weight: 700;
 font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
 color:var(--first-color-text);
-width: 270px;
 margin-bottom: 10px;
 }
 .characteristics-text {
 font-weight: 400;
 line-height: 1.71;
 color:var(--second-color-paragraf);
-width: 270px;
 }
 /* ---Сеція чим ми займаємося --- */
-
+.active {
+    padding-top: 0;
+}
 .type-activity-title {
 font-weight: 700;
 font-size: 36px;
@@ -161,12 +201,25 @@ line-height: 1.16;
 letter-spacing:0.03em;
 text-align: center;
 color:var(--first-color-text);
+margin-bottom: 50px;
 }
 .type-activity-list {
     list-style: none;
+    display: flex;
+    gap: 30px;
+   
+    }
+.activity-item {
+width:calc((100%:60px)/3);
+    }
+    .type-activity-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
     }
 /* ---------Наша команда */
-.section-team {
+.team {
 background:var(--second-background);
 }
 .team-title {
@@ -176,9 +229,21 @@ line-height: 1.16;
 letter-spacing:0.03em;
 text-align: center;
 color: var(--first-color-text);
+margin-bottom: 50px;
 }
+
 .team-list {
     list-style: none;
+    display: flex;
+    gap: 30px;
+    }
+.team-item {
+    width: calc((100%:90px)/4);
+}
+.img-team {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .team-name {
 font-weight: 500;
@@ -186,6 +251,8 @@ font-size: 16px;
 line-height: 1.19;
 text-align: center;
 color: var(--first-color-text);
+margin-top: 30px;
+margin-bottom: 10px;
 }
 .team-text {
 font-weight: 400;
@@ -193,18 +260,25 @@ font-size: 16px;
 line-height: 1.19;
 text-align: center;
 color: var(--second-color-paragraf);
+margin-bottom: 30px;
 }
 /* ----Footer---- */
+
 .footer {
     background:var(--color-bacround);
+    padding: 60px 0;
 }
+
 .footer-logo {
-    font-family: 'Raleway';
+display: block;
+font-family: 'Raleway';
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
 color: var(--color-logo);
 text-decoration: none;
+letter-spacing: 0.03em;
+margin-bottom: 20px;
 }
 .footer-span {
 font-family: 'Raleway';
@@ -215,28 +289,38 @@ color: var(--three-color);
 }
 .footer-list{
 list-style: none;
-font-style: normal;
 }
+
 .footer-text {
+font-size: 14px;
 font-weight: 400;
 line-height: 1.71;
 color: var(--three-color);
-
+margin-bottom:9px ;
+font-style: normal;
 }
 .footer-link-mail {
-font-weight: 400;
+font-style: normal;
+display: block;
 line-height: 1.71;
 color: var(---second-color-rgba);
 text-decoration: none;
+margin-bottom: 9px;
+
 }
 .footer-link-tel {
-font-weight: 400;
+font-style: normal;
+display: block;
 line-height: 1.71;
 color: var(---second-color-rgba);
 text-decoration: none;
 }
 
 /* ----2 cторінка Портфолио */
+.hero-portfolio {
+    padding-top: 100px;
+    padding-bottom: 114px;
+}
 
 .visually-hidden {
     position: absolute; 
@@ -251,26 +335,34 @@ clip: rect(0 0 0 0);
 overflow: hidden; 
 }
 .portfolio-list {
-    list-style: none;
+    list-style: none; 
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 /* Кнопки для портфоліо */
 .portfolio-button{
+display: block;
 font-family: inherit;  
 font-weight: 500;
 font-style: normal;
 font-size: 16px;
-line-height: 1.6;
+line-height: 1.62;
 text-align: center;
 letter-spacing: 0.03em;
 color: var(--first-color-text);
-background: var(--second-background);
 border-radius: 4px;
 border-color:var(--second-background);
+padding: 6px 22px;
+border: none;
 }
+
 .btn {
 color: var(--three-color);  
 background:var(----color-backround);
 box-shadow: var(--three-rgba);
+
 } 
 /* ----Hover  для Портфолио--- */
 .portfolio-button:hover , 
@@ -284,6 +376,16 @@ box-shadow: var(--three-rgba);
  /* -------Друга секця списку  */
  .portfolio-items  {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+.img-portfolio {
+display: block;
+max-width: 100%;
+height: auto;
+
 }
 
 .portfolio-title {
@@ -292,11 +394,13 @@ font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
 color: var(--first-color-text);
+margin: 20px 24px 4px;
 }
 .potfolio-text {
 font-weight: 400;
 font-size: 16px;
 line-height: 1.9;
 color: var(--second-color-paragraf);
+margin: 0 24px 20px;
 }
 
