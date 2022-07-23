@@ -15,7 +15,6 @@
 }
 body {
 font-family: 'Roboto' , 'Raleway' , sans-serif;
-width: 1600px;
 font-size: 14px;
 letter-spacing: 0.03em;
 color: var(--first-color-text);
@@ -36,7 +35,7 @@ border-color:var(--color-bacround) ;
     width: 1200px;
    margin: 0 auto;
    padding: 0 15px;
-   outline: 1px solid transparent;
+   
  }
  .section {
     padding:94px 0 ;
@@ -123,6 +122,7 @@ margin-left: 50px;
     padding-bottom: 200px;
 }
 .bisnes-title {
+width: 696px;
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
@@ -130,6 +130,7 @@ text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--three-color);
+margin: 0 auto;
 }
 /* -----------Кнопка Button-------- */
 .hero-btn {
@@ -222,6 +223,7 @@ width:calc((100%:60px)/3);
 .team {
 background:var(--second-background);
 }
+
 .team-title {
 font-weight: 700;
 font-size: 36px;
@@ -239,6 +241,9 @@ margin-bottom: 50px;
     }
 .team-item {
     width: calc((100%:90px)/4);
+    background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 }
 .img-team {
     display: block;
@@ -290,13 +295,14 @@ color: var(--three-color);
 .footer-list{
 list-style: none;
 }
-
+.footer-item:not(:last-child) {
+    margin-bottom: 9px;
+}
 .footer-text {
 font-size: 14px;
 font-weight: 400;
 line-height: 1.71;
 color: var(--three-color);
-margin-bottom:9px ;
 font-style: normal;
 }
 .footer-link-mail {
@@ -305,7 +311,6 @@ display: block;
 line-height: 1.71;
 color: var(---second-color-rgba);
 text-decoration: none;
-margin-bottom: 9px;
 
 }
 .footer-link-tel {
@@ -387,6 +392,12 @@ max-width: 100%;
 height: auto;
 
 }
+.div-portfolio {
+padding: 20px 24px;
+border-color: var(--three-color);
+border:0 1px 1px solid #EEEEEE;
+}
+
 
 .portfolio-title {
 font-weight: 700;
@@ -394,13 +405,12 @@ font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
 color: var(--first-color-text);
-margin: 20px 24px 4px;
+margin-bottom: 4px;
 }
 .potfolio-text {
 font-weight: 400;
 font-size: 16px;
-line-height: 1.9;
+line-height: 1.87;
 color: var(--second-color-paragraf);
-margin: 0 24px 20px;
-}
 
+}
