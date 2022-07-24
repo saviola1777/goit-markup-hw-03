@@ -29,6 +29,7 @@ border-color:var(--color-bacround) ;
  }
  img {
     display: block;
+    max-width: 100%;
  }
  .cointeiner {
     box-sizing: border-box;
@@ -208,6 +209,7 @@ margin-bottom: 50px;
     list-style: none;
     display: flex;
     gap: 30px;
+    
    
     }
 .activity-item {
@@ -395,7 +397,7 @@ height: auto;
 .div-portfolio {
 padding: 20px 24px;
 border-color: var(--three-color);
-border:0 1px 1px solid #EEEEEE;
+border-bottom:1px solid #EEEEEE;
 }
 
 
